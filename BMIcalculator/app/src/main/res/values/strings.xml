@@ -1,0 +1,11 @@
+<resources>
+   <string name="app_name">BMI CALCULATOR</string>
+   <string name="mass">Waga (kg):</string>
+   <string name="placeholder_mass">Podaj wagę w kg.</string>
+   <string name="height">Wzrost (cm):</string>
+   <string name="placeholder_height">Podaj wzrost w cm.</string>
+   <string name="bmi">BMI:</string>
+   <string name="bmi_category">Wzkaźnik BMI:</string>
+   <string name="invalid_height">Nieprawidłowy wzrost.</string>
+   <string name="invalid_mass">Nieprawidłowa waga.</string>
+</resources>
