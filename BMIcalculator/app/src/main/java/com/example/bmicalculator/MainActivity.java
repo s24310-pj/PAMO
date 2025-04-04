@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat;
 
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView bmiTextView;
     private TextView bmiCategoryTextView;
 
+
     /**
      * Metoda wywoływana przy tworzeniu aktywności.
      * Inicjalizuje elementy interfejsu użytkownika i dodaje nasłuchiwacze zdarzeń.
@@ -42,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
         bmiTextView = findViewById(R.id.bmiTextView);
         bmiCategoryTextView = findViewById(R.id.bmiCategoryTextView);
 
+        Button backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> finish());
+
+        // Watcher który przy zmianie tekstu kalkuluje BMI
         TextWatcher bmiTextWatcher = new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -92,16 +98,16 @@ public class MainActivity extends AppCompatActivity {
             String bmiCategory;
             int color;
             if (bmi < 18.5) {
-                bmiCategory = "Niedowaga";
+                bmiCategory = getString(R.string.underweight);
                 color = ContextCompat.getColor(this, R.color.yellow);
             } else if (bmi < 25) {
-                bmiCategory = "Optimum";
+                bmiCategory = getString(R.string.optimal);
                 color = ContextCompat.getColor(this, R.color.green);
             } else if (bmi < 30) {
-                bmiCategory = "Nadwaga";
+                bmiCategory = getString(R.string.overweight);
                 color = ContextCompat.getColor(this, R.color.orange);
             } else {
-                bmiCategory = "Otyłość";
+                bmiCategory = getString(R.string.obesity);
                 color = ContextCompat.getColor(this, R.color.red);
             }
             bmiCategoryTextView.setText(bmiCategory);

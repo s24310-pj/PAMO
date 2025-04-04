@@ -4,8 +4,45 @@
    <string name="placeholder_mass">Podaj wagę w kg.</string>
    <string name="height">Wzrost (cm):</string>
    <string name="placeholder_height">Podaj wzrost w cm.</string>
+   <string name="age">Wiek (lata):</string>
+   <string name="placeholder_age">Podaj wiek w latach.</string>
+   <string name="activity">Poziom aktywności:</string>
+   <string name="gender">Płeć:</string>
    <string name="bmi">BMI:</string>
    <string name="bmi_category">Wzkaźnik BMI:</string>
+   <string name="calories">Liczba kalorii:</string>
    <string name="invalid_height">Nieprawidłowy wzrost.</string>
    <string name="invalid_mass">Nieprawidłowa waga.</string>
+   <string name="ic_welcome_descr">Ikona logo kalkulatora BMI</string>
+   <string name="radio_man">Mężczyzna</string>
+   <string name="radio_woman">Kobieta</string>
+   <string name="error">Wystąpił Błąd</string>
+   <string name="bmi_calc">Kalkulator BMI</string>
+   <string name="calories_calc">Kalkulator kalorii</string>
+   <string name="eg_recipes">Pokaż przykładowe przepisy</string>
+   <string name="close">X</string>
+   <string name="daily_calorie_needs">Twoje dzienne zapotrzebowanie: %d kcal</string>
+   <string name="calorie_calc_title">Kalkulator Kalorii</string>
+   <string name="bmi_calc_title">Kalkulator BMI</string>
+   <string name="underweight">Niedowaga</string>
+   <string name="optimal">Optimum</string>
+   <string name="overweight">Nadwaga</string>
+   <string name="obesity">Otyłość</string>
+   <string name="recipe_salad_chicken">Sałatka z kurczakiem – 450 kcal</string>
+   <string name="recipe_oatmeal_fruit">Owsianka z owocami – 350 kcal</string>
+   <string name="recipe_sandwich_salmon">Kanapka z łososiem – 500 kcal</string>
+   <string name="recipe_chicken_rice">Kurczak z ryżem – 600 kcal</string>
+   <string name="recipe_pasta_pesto">Makaron z pesto – 700 kcal</string>
+   <string name="recipe_greek_salad">Sałatka grecka – 400 kcal</string>
+   <string name="recipe_beef_burger">Burger wołowy – 800 kcal</string>
+   <string name="recipe_steak_fries">Stek z frytkami – 1000 kcal</string>
+   <string name="recipe_homemade_pizza">Pizza domowa – 900 kcal</string>
+
+   <string-array name="activity_levels">
+      <item>Brak aktywności</item>
+      <item>Mała aktywność</item>
+      <item>Średnia aktywność</item>
+      <item>Duża aktywność</item>
+      <item>Bardzo duża aktywność</item>
+   </string-array>
 </resources>
