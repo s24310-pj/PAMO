@@ -1,5 +1,7 @@
 package com.example.bmicalculator;
 
+import static android.provider.Settings.System.getString;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -26,9 +28,6 @@ public class CalorieCalculatorActivity extends AppCompatActivity {
     private RadioButton maleRadioButton;
     private SeekBar activitySeekBar;
     private Button recipeButton;
-
-    private final double[] activityFactors = {1.2, 1.375, 1.55, 1.725, 1.9};
-
     private int dailyCalories = 0;
 
     @Override
@@ -94,16 +93,9 @@ public class CalorieCalculatorActivity extends AppCompatActivity {
             int age = Integer.parseInt(ageEditText.getText().toString());
 
             int activityIndex = activitySeekBar.getProgress();
-            double activityFactor = activityFactors[activityIndex];
+            boolean isMale = maleRadioButton.isChecked();
 
-            double bmr;
-            if (maleRadioButton.isChecked()) {
-                bmr = 66.47 + (13.75 * weight) + (5.003 * height) - (6.755 * age);
-            } else {
-                bmr = 655.1 + (9.563 * weight) + (1.850 * height) - (4.676 * age);
-            }
-
-            dailyCalories = (int) (bmr * activityFactor);
+            dailyCalories = CalorieCalculatorUtil.calculateDailyCalories(weight, height, age, isMale, activityIndex);
 
             caloriesTextView.setText(String.format(Locale.getDefault(), "%d", dailyCalories));
             recipeButton.setEnabled(true);

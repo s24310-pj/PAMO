@@ -20,6 +20,7 @@
         android:hint="@string/placeholder_mass"
         android:inputType="number|numberDecimal"
         android:maxLength="3"
+        android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/weightLabel"
         app:layout_constraintTop_toTopOf="parent" />
@@ -170,6 +171,7 @@
         android:hint="@string/placeholder_height"
         android:inputType="numberDecimal"
         android:maxLength="3"
+        android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/heightLabel"
         app:layout_constraintTop_toBottomOf="@+id/weightEditText" />
@@ -195,6 +197,7 @@
         android:hint="@string/placeholder_age"
         android:inputType="numberDecimal"
         android:maxLength="3"
+        android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ageLabel"
         app:layout_constraintTop_toBottomOf="@+id/heightEditText" />
