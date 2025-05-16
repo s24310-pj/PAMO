@@ -1,7 +1,5 @@
 package com.example.bmicalculator;
 
-import static android.provider.Settings.System.getString;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -28,6 +26,7 @@ public class CalorieCalculatorActivity extends AppCompatActivity {
     private RadioButton maleRadioButton;
     private SeekBar activitySeekBar;
     private Button recipeButton;
+
     private int dailyCalories = 0;
 
     @Override
@@ -46,11 +45,14 @@ public class CalorieCalculatorActivity extends AppCompatActivity {
         maleRadioButton = findViewById(R.id.maleRadioButton);
         recipeButton = findViewById(R.id.recipeButton);
 
+
         final String[] activityLevels = getResources().getStringArray(R.array.activity_levels);
         activityLevelText.setText(activityLevels[activitySeekBar.getProgress()]);
 
+        // Przycisk zamknięcia aktywności
         Button backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(v -> finish());
+
 
         // Przycisk przejścia do aktywności z przepisami
         recipeButton.setOnClickListener(v -> {

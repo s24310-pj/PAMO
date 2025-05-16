@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * RecipeActivity - Aktywność wyświetlająca sugerowane przepisy na podstawie dziennego zapotrzebowania kalorycznego.
- *<p>
+ * <p>
  * Użytkownik otrzymuje listę potraw dostosowanych do jego zapotrzebowania kalorycznego.
  * Możliwy jest powrót do ekranu kalkulatora kalorii.
  */
@@ -43,6 +43,12 @@ public class RecipeActivity extends AppCompatActivity {
         // Konfiguracja adaptera listy i ustawienie jej w widoku
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, recipes);
         recipeListView.setAdapter(adapter);
+
+        Button shoppingListButton = findViewById(R.id.shoppingListButton);
+        shoppingListButton.setOnClickListener(v -> {
+            Intent i = new Intent(RecipeActivity.this, ShoppingActivity.class);
+            startActivity(i);
+        });
     }
 
 

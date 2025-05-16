@@ -28,6 +28,12 @@
         <activity
             android:name=".RecipeActivity"
             android:exported="true" />
+        <activity
+            android:name=".ShoppingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BmiHistoryActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -18,9 +18,9 @@
         android:layout_marginTop="120dp"
         android:layout_marginEnd="3dp"
         android:hint="@string/placeholder_mass"
+        android:importantForAutofill="no"
         android:inputType="number|numberDecimal"
         android:maxLength="3"
-        android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/weightLabel"
         app:layout_constraintTop_toTopOf="parent" />
@@ -169,9 +169,9 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="3dp"
         android:hint="@string/placeholder_height"
+        android:importantForAutofill="no"
         android:inputType="numberDecimal"
         android:maxLength="3"
-        android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/heightLabel"
         app:layout_constraintTop_toBottomOf="@+id/weightEditText" />
@@ -195,9 +195,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="3dp"
         android:hint="@string/placeholder_age"
+        android:importantForAutofill="no"
         android:inputType="numberDecimal"
         android:maxLength="3"
-        android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ageLabel"
         app:layout_constraintTop_toBottomOf="@+id/heightEditText" />
@@ -217,11 +217,11 @@
     <TextView
         android:id="@+id/calorieCalcTitle"
         android:layout_width="match_parent"
-        android:gravity="center"
         android:layout_height="50dp"
         android:background="@color/colorPrimary"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center"
         android:text="@string/calorie_calc_title"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

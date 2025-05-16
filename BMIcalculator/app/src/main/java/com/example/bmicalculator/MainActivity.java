@@ -1,5 +1,6 @@
 package com.example.bmicalculator;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -43,9 +44,17 @@ public class MainActivity extends AppCompatActivity {
         heightEditText = findViewById(R.id.heightEditText);
         bmiTextView = findViewById(R.id.bmiTextView);
         bmiCategoryTextView = findViewById(R.id.bmiCategoryTextView);
+        Button historyButton = findViewById(R.id.historyButton);
 
+        // Przycisk cofnięcia do wyboru funkcji
         Button backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(v -> finish());
+
+        // Przycisk przejścia do wykresu BMI
+        historyButton.setOnClickListener(v -> {
+            Intent i = new Intent(MainActivity.this, BmiHistoryActivity.class);
+            startActivity(i);
+        });
 
         // Watcher który przy zmianie tekstu kalkuluje BMI
         TextWatcher bmiTextWatcher = new TextWatcher() {
